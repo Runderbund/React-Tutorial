@@ -7,12 +7,13 @@ const AddEntryForm = (props) => {
     const [date, setDate] = useState('');
 
     function handleSubmit (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevents entire screen refresh.
         let newEntry = {
         weight: weight,
         date: date
         }
         console.log(newEntry);
+        props.addNewEntryProperty(newEntry);
     }
 
     return (
