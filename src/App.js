@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 import AddEntryForm from './Components/AddEntry/AddEntryForm';
+import EntriesChartTracker from './Components/EntriesChartTracker/EntriesChartTracker';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       {/* Function reference, not call. No (). Call addNewEntryProperty on the function, and execute on it
       Typically same name as function (addNewEntry) but does not have to be.
       Just has to match "props.addNewEntryProperty(newEntry);" in AddEntryForm.jsx */}
+      <EntriesChartTracker parentEntries = {entries}/>
       
     </div>
   );
